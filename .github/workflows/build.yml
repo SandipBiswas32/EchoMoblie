@@ -27,7 +27,7 @@ jobs:
         working-directory: ${{ env.PROJECT_DIR }}
         run: |
           chmod +x gradlew
-          ./gradlew build --no-daemon --dependency-verification=off
+          ./gradlew remapJar --no-daemon --dependency-verification=off
 
       - name: Upload jar
         if: success()
